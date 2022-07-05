@@ -35,5 +35,5 @@ User always redirected to the browser.
 
 issues:
 if the user is not logged in, it is redirected to the homepage after the sign in step.
-on mobile, user is redirected to share post on public not in a message.
+on mobile, user is redirected to share post on public not in a message (with the app if it is installed or in browser)
 
