@@ -1,25 +1,16 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import SendWithWhatsapp from "./social-media/SendWithWhatsapp"
+import SendWithFb from "./social-media/SendWithFb"
+import SendWithLinkedin from "./social-media/SendWithLinkedin"
+import HomePage from "./social-media/index"
+
+
 export default function App() {
-  const [value, setValue] = React.useState("");
-  const handleClick = () => {
-    if (value) {
-      const text = value;
-      return window.open(
-        `https://api.whatsapp.com/send?text=${text}`,
-        "_blank"
-      );
-    }
-  };
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  };
-  return (
-    <div style={{margin: '0 auto'}}>
-      <h3>Share your message on whatsapp</h3>
-      <input type="text" name="message" onChange={handleChange} style={{marginRight: 10}}/>
-      <button onClick={handleClick} className="mobileShow">
-        Share to whatsapp
-      </button>
-    </div>
-  );
+  return (<Routes>
+    <Route path='/' element={<HomePage />} />
+    <Route path='/send-with-whatsapp' element={<SendWithWhatsapp />}/>
+    <Route path='/send-with-fb' element={<SendWithFb />}/>
+    <Route path='/send-with-linkedin' element={<SendWithLinkedin />}/>
+    </Routes>)
 }
