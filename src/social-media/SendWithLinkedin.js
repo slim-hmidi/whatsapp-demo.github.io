@@ -1,7 +1,7 @@
 export default function SendWithLinkedin() {
     const handleClick = async () => {
       window.open(
-        `https://www.linkedin.com/shareArticle?mini=true&url=blog.shahednasser.com`
+        `https://www.linkedin.com/sharing/share-offsite/?url=blog.shahednasser.com`
       );
     };
     return (
